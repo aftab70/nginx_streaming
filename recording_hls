@@ -1,0 +1,6 @@
+application live {
+             live on;
+             record all;
+             record_path /var/www/html/recordings;
+             record_unique on;
+}
