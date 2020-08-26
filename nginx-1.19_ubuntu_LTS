@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+touch /etc/apt/sources.list.d/nginx.list
+echo "deb [arch=amd64] http://nginx.org/packages/mainline/ubuntu/ bionic nginx" > /etc/apt/sources.list.d/nginx.list 
+echo "deb-src http://nginx.org/packages/mainline/ubuntu/ bionic nginx" >> /etc/apt/sources.list.d/nginx.list
+wget http://nginx.org/keys/nginx_signing.key
+apt-key add nginx_signing.key
+apt-get update
+apt-get install nginx -y
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+echo "nginx.conf backup is done..."
