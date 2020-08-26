@@ -9,6 +9,6 @@ apt-get update
 apt-get install nginx -y
 cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 echo "nginx.conf backup is done..."
-wget -O /etc/nginx/nginx.conf https://github.com/opstree/OT-Microservices/blob/master/webserver/nginx.conf
 systemctl start nginx
 systemctl status nginx
+wget -O /etc/nginx/nginx.conf https://github.com/opstree/OT-Microservices/blob/master/webserver/nginx.conf
