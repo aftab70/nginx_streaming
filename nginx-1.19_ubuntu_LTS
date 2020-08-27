@@ -1,4 +1,4 @@
-# for nginx frontend
+# for nginx frontend, this script reuqited root privileges.
 
 vim nginx.sh
 
