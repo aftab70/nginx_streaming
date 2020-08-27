@@ -1,3 +1,7 @@
+# for nginx frontend
+
+vim nginx.sh
+
 #!/bin/bash
 
 touch /etc/apt/sources.list.d/nginx.list
@@ -15,3 +19,6 @@ sed -i 's/empms-frontend/'$1'/g' /etc/nginx/nginx.conf
 sed -i 's/empms-gateway/'$1'/g' /etc/nginx/nginx.conf 
 systemctl restart nginx
 
+# script execution 
+
+sh nginx.sh lb_ipaddress_here
